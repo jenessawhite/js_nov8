@@ -1,0 +1,20 @@
+{
+  "name": "js_nov8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenessawhite/js_nov8.git"
+  },
+  "keywords": [],
+  "author": "Jenessa White <jenessaw31@gmail.com> (https://medium.com/@jenessawhite)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jenessawhite/js_nov8/issues"
+  },
+  "homepage": "https://github.com/jenessawhite/js_nov8#readme"
+}
