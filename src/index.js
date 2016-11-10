@@ -248,18 +248,18 @@ console.assert(cat.growl() === "meow")
 
 // // 4. Create a constructor called `KeepSecret`. The constructor function itself should accept a parameter called `secret` it should store this in a private variable (use a closure). Add a method to the prototype that is called `squeal` that returns the secret string.
 
-function KeepSecret (secret) {
-
-};
-
-var add = (function () {
-    var counter = 0;
-    return function () {return counter += 1;}
+var KeepSecret = (function (secret) {
+  var private = secret
+  return function () {return secret;}
 })();
+
+KeepSecret.prototype.squeal = function (secret) {
+  return secret;
+};
 
 // assertions
 var mySecret = "My class rocks!"
-var dontTellNobody = new KeepSecret(mySecret)
+var dontTellNobody = new KeepSecret(mySecret);
 console.assert(dontTellNobody.squeal() === mySecret)
 //
 // // 5. Create a constructor called `Key`. Create another constructor called `Safe`. Make the Safe constructor take 2 arguments. The first argument can be any piece if data to keep safe. This must be stored using a private variable like you did with KeepSecret. The 2nd param to the `Safe` constructor needs to be an instance of `Key` you need to store it privately as well. Add a function to the Safe prototype called `unlock` that accepts a key. If the key matches the key that was used to create the Safe; then return the secret data.
